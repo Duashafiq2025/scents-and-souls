@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--cream);
+  color: var(--deep-purple);
+}
+
+.header {
+  background: linear-gradient(90deg, #12071F, #4B1D72, #1D0B32);
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo {
+  width: 170px;
+  height: auto;
+}
+
+button {
+  background: var(--purple);
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--gold);
+  color: var(--deep-purple);
+}
+.header a{
+   color: #F8F4FA;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 15px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.header a:hover {
+  color: #D4AF6A;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #B89AC9;
+  border-radius: 25px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-box {
+  position: relative;
+  width: 200px;
+}
+
+.search-box button{
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 6px;
+  cursor: pointer;
+}
+.left-section{
+  display: flex;
+  align-items: center;
+}
+.left-section a{
+  font-size: 20px;
+}
+.hero-section{
+  height: 70vh;
+  background-color:  #241033;
+  display:flex ;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-left:70px ;
+  gap: 40px;
+}
+.hero-section h1 {
+  color: #F8F4FA;
+  font-size: 55px;
+  line-height: 1.1;
+  margin: 15px 0;
+}
+.hero-section button {
+  background-color: #D4AF6A;
+  color: #241033;
+  border: none;
+  width:300px ;
+  padding: 13px 25px; 
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.hero-section button:hover {
+  background-color: #F8F4FA;
+}
+.hero-content{
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   gap:10px
+}
+.hero-img{
+   display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.hero-img img{
+   width: 700px;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: normal;
+}
