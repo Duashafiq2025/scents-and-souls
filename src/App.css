@@ -115,7 +115,6 @@ body {
   display: flex;
   justify-content: center;
   width: 50%;
- 
 }
 .hero-img img {
   width: 100%;
@@ -183,4 +182,60 @@ body {
   color: var(--deep-purple);
   font-size: 32px;
   margin-bottom: 35px;
+}
+
+.footer {
+  background: var(--dark-bg);
+  color: var(--cream);
+  padding: 50px 60px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-about {
+  text-align: center;
+}
+
+.footer h3 {
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: var(--lavender);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--cream);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid #3d2850;
+  margin-top: 35px;
+  padding-top: 20px;
+  color: var(--lavender);
+  font-size: 13px;
+}
+.footer-logo {
+  width: 260px;
+  height: auto;
+  margin-bottom: 15px;
 }

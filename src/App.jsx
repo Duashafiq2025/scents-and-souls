@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import "./App.css";
 import "./index.css";
 import Products from "./components/Products";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
       <div className="products">
         <Products />
+        <Footer />
       </div>
     </div>
   );

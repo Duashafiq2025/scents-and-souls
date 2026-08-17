@@ -1,13 +1,12 @@
 import React from "react";
-import perfume from "../assets/perfume.png";
 
-function ProductCard() {
+function ProductCard({ product }) {
   return (
     <div className="product-card">
-      <img src={perfume} alt="Velvet Noir perfume" />
-      <h3>Velvet Noir</h3>
-      <p>$49</p>
-      <p>A warm and elegant fragrance with a mysterious touch.</p>
+      <img src={product.image_url} alt={product.title} />
+      <h3>{product.title}</h3>
+      <p>{product.price}</p>
+      <p>{product.description}</p>
       <button>+ Add to Cart</button>
     </div>
   );
