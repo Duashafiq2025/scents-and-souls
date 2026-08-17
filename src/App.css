@@ -12,13 +12,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+
 }
 .logo {
   width: 170px;
   height: auto;
 }
 
-button {
+/* button {
   background: var(--purple);
   color: var(--white);
   border: none;
@@ -30,7 +31,7 @@ button {
 button:hover {
   background: var(--gold);
   color: var(--deep-purple);
-}
+} */
 .header a{
    color: #F8F4FA;
   text-decoration: none;
@@ -44,37 +45,11 @@ button:hover {
   color: #D4AF6A;
 }
 
-.search-box input {
-  width: 100%;
-  padding: 10px 40px 10px 15px;
-  border: 1px solid #B89AC9;
-  border-radius: 25px;
-  outline: none;
-  box-sizing: border-box;
-}
-
-.search-box {
-  position: relative;
-  width: 200px;
-}
-
-.search-box button{
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  background: transparent;
-  padding: 6px;
-  cursor: pointer;
-}
-.left-section{
+.header div{
   display: flex;
-  align-items: center;
+  gap: 30px;
 }
-.left-section a{
-  font-size: 20px;
-}
+
 .hero-section{
   height: 70vh;
   background-color:  #241033;
@@ -120,8 +95,7 @@ button:hover {
   width: 50%;
 }
 .hero-img img{
-   width: 700px;
-    height: 100%;
-    object-fit: cover;
-    mix-blend-mode: normal;
+   width: 100%;
+  max-width: 500px;
+  height: auto;
 }
