@@ -11,7 +11,6 @@ function App() {
       <Header />
       <Hero />
 
-      <h1 className="productCard-heading">Best Collections</h1>
 
       <div className="products">
         <Products />

@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-  background: linear-gradient(90deg, #12071f, #4b1d72, #1d0b32);
+  background: linear-gradient(90deg, #180a25, #381e50, #241033);
   height: 90px;
   display: flex;
   justify-content: space-between;
@@ -46,6 +46,22 @@ body {
   display: flex;
   gap: 30px;
 }
+.admin-login {
+  background: var(--gold);
+  color: var(--deep-purple);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-login:hover {
+  background: var(--cream);
+  color: var(--deep-purple);
+}
 
 .hero-section {
   height: 70vh;
@@ -57,13 +73,21 @@ body {
   padding-left: 70px;
   gap: 40px;
 }
-.hero-section h1 {
+.hero-content h1 {
   color: var(--cream);
   font-size: 55px;
   line-height: 1.1;
   margin: 15px 0;
 }
-.hero-section button {
+.hero-content p {
+  color: var(--lavender);
+}
+.hero-content p:first-child {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.hero-content button {
   background-color: var(--gold);
   color: var(--deep-purple);
   border: none;
@@ -77,8 +101,9 @@ body {
   transition: 0.3s;
 }
 
-.hero-section button:hover {
-  color: var(--cream);
+.hero-content button:hover {
+  background-color: var(--cream);
+  color: var(--deep-purple);
 }
 .hero-content {
   width: 50%;
@@ -90,18 +115,12 @@ body {
   display: flex;
   justify-content: center;
   width: 50%;
+ 
 }
 .hero-img img {
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   height: auto;
-}
-
-.productCard-heading {
-  font-size: 40px;
-  font-weight: 500px;
-  text-align: center;
-  margin: 70px;
 }
 
 .product-card {
@@ -149,5 +168,19 @@ body {
   background: var(--gold);
   color: var(--deep-purple);
 }
-.product-section {
+.products-section {
+  padding: 50px;
+  background: var(--cream);
+}
+.products-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.products-section h1 {
+  text-align: center;
+  color: var(--deep-purple);
+  font-size: 32px;
+  margin-bottom: 35px;
 }

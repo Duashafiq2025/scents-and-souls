@@ -8,10 +8,10 @@ function Header() {
       <div>
         <a>Home </a>
         <a>User portal</a>
-        <a>About us</a>
+        <a>🛒 cart</a>
       </div>
       <div>
-        <a>🛒 cart</a>
+        <button className="admin-login"> Login</button>
       </div>
     </nav>
   );

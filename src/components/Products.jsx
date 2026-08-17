@@ -4,9 +4,13 @@ import ProductCard from "./ProductCard";
 function Products() {
   return (
     <div className="products-section">
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
+      <h1>Best Collections</h1>
+      <div className="products-container">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
     </div>
   );
 }
