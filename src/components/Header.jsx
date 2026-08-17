@@ -9,9 +9,8 @@ function Header() {
         <a>Home </a>
         <a>User portal</a>
         <a>About us</a>
-        
       </div>
-      <div >
+      <div>
         <a>🛒 cart</a>
       </div>
     </nav>
