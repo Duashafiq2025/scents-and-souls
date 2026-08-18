@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { supabase } from "../supabaseClient";
 
-function Products() {
+function Products({ addToCart }) {
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     async function fetchProducts() {
       const response = await supabase.from("products").select("*");
@@ -20,7 +21,11 @@ function Products() {
       <h1>Best Collections</h1>
       <div className="products-container">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            addToCart={addToCart}
+          />
         ))}
       </div>
     </div>
