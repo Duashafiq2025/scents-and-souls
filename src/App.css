@@ -36,8 +36,8 @@ body {
   font-size: 15px;
   font-weight: 500;
   margin: 0 15px;
-  transition: 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 .header a:hover {
   color: #d4af6a;
@@ -107,6 +107,10 @@ body {
 .hero-content button:hover {
   background-color: var(--cream);
   color: var(--deep-purple);
+  transform: translateY(-3px);
+}
+.hero-content-btn:active {
+  transform: translateY(0);
 }
 .hero-content {
   width: 50%;
@@ -139,6 +143,19 @@ body {
     box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
+  animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .product-card:hover {
@@ -227,6 +244,7 @@ body {
   background: var(--dark-bg);
   color: var(--cream);
   padding: 50px 60px 20px;
+  margin-top: 80px;
 }
 
 .footer-content {
@@ -456,4 +474,196 @@ body {
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
+}
+
+/* ========= ADMIN LOGIN ======= */
+.admin-login-page {
+  min-height: 70vh;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.admin-login-page form {
+  width: 100%;
+  max-width: 360px;
+  background: var(--white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(36, 16, 51, 0.12);
+  box-sizing: border-box;
+}
+
+.admin-login-page h1 {
+  text-align: center;
+  color: var(--deep-purple);
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.admin-login-page input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d8cde0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 14px;
+}
+
+.admin-login-page input:focus {
+  border-color: var(--purple);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--purple);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-login-page button:hover {
+  background: var(--gold);
+  color: var(--deep-purple);
+}
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  cursor: pointer;
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.toggle-btn:hover {
+  color: #3730a3;
+  text-decoration: underline;
+}
+
+/* ======== ADD PRODUCT-BTN ==== */
+.add-product-home-btn {
+  display: block;
+  margin: 30px 30px 20px auto;
+  padding: 13px 28px;
+  background: var(--gold);
+  color: var(--deep-purple);
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(36, 16, 51, 0.15);
+  transition: 0.3s ease;
+}
+
+.add-product-home-btn:hover {
+  background: var(--purple);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(36, 16, 51, 0.2);
+}
+
+.add-product-home-btn:active {
+  transform: translateY(0);
+}
+
+/* ============== ADMIN PAGE ============== */
+
+.admin-page {
+  min-height: 70vh;
+  background: var(--cream);
+  padding: 70px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.admin-page h1 {
+  color: var(--deep-purple);
+  font-size: 35px;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.admin-page form {
+  width: 100%;
+  max-width: 500px;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 30px rgba(36, 16, 51, 0.15);
+  border-top: 4px solid var(--gold);
+}
+
+.admin-page input,
+.admin-page textarea {
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #d8cde0;
+  border-radius: 7px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: var(--deep-purple);
+  background: #fcfafd;
+  transition: 0.3s ease;
+}
+
+.admin-page input {
+  height: 48px;
+}
+
+.admin-page textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.admin-page input::placeholder,
+.admin-page textarea::placeholder {
+  color: #918699;
+}
+
+.admin-page input:focus,
+.admin-page textarea:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(91, 42, 134, 0.08);
+  background: var(--white);
+}
+
+.admin-page form button {
+  width: 100%;
+  padding: 13px;
+  background: var(--purple);
+  color: var(--white);
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-page form button:hover {
+  background: var(--gold);
+  color: var(--deep-purple);
+  transform: translateY(-2px);
+}
+
+.admin-page form button:active {
+  transform: translateY(0);
 }

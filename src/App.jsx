@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { supabase } from "./supabaseClient";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import "./App.css";
@@ -7,11 +8,32 @@ import Products from "./components/Products";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 import About from "./components/About";
+import AdminLogin from "./components/AdminLogin";
+import AdminPage from "./components/AdminPage";
 
 function App() {
   const [cart, setCart] = useState([]);
   const [page, setPage] = useState("home");
+  const [user, setUser] = useState(null);
 
+  useEffect(() => {
+    async function getUser() {
+      const { data } = await supabase.auth.getUser();
+      setUser(data.user);
+    }
+
+    getUser();
+
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        setUser(session?.user ?? null);
+      },
+    );
+
+    return () => {
+      listener.subscription.unsubscribe();
+    };
+  }, []);
   function addToCart(product) {
     const existingProduct = cart.find((item) => item.id === product.id);
 
@@ -26,6 +48,7 @@ function App() {
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
     }
+    alert(product.title + "added to cart!");
   }
 
   function increaseQuantity(id) {
@@ -52,6 +75,18 @@ function App() {
         return (
           <>
             <Hero />
+            <button
+              className="add-product-home-btn"
+              onClick={() => {
+                if (user) {
+                  setPage("admin");
+                } else {
+                  setPage("admin-login");
+                }
+              }}
+            >
+              + Add Products
+            </button>
             <Products addToCart={addToCart} />
           </>
         );
@@ -67,6 +102,10 @@ function App() {
             decreaseQuantity={decreaseQuantity}
           />
         );
+      case "admin-login":
+        return <AdminLogin changePage={setPage} />;
+      case "admin":
+        return <AdminPage />;
 
       default:
         return <Hero />;
@@ -75,7 +114,7 @@ function App() {
 
   return (
     <div>
-      <Header cart={cart} changePage={setPage} page={page} />
+      <Header cart={cart} changePage={setPage} page={page} user={user} />
 
       <main>{renderPage()}</main>
 
