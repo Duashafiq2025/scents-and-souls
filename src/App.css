@@ -139,19 +139,6 @@ body {
     box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
-  animation: slideUp 0.8s ease forwards;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(80px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .product-card:hover {
@@ -416,4 +403,57 @@ body {
   font-size: 17px;
   font-weight: 600;
   margin: 0;
+}
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.quantity button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 5px;
+  background: var(--purple);
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.quantity button:hover {
+  background: var(--gold);
+  color: var(--deep-purple);
+}
+
+.quantity span {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--deep-purple);
+}
+.cart-total {
+  max-width: 900px;
+  margin: 30px auto 0;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-total h3 {
+  color: var(--deep-purple);
+}
+
+.cart-total button {
+  background: var(--gold);
+  color: var(--deep-purple);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
 }
