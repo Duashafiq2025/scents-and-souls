@@ -143,6 +143,8 @@ body {
     box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
   animation: slideUp 0.8s ease forwards;
 }
 
@@ -195,10 +197,12 @@ body {
   line-height: 1.6;
   min-height: 45px;
   margin-bottom: 18px;
+  flex: 1;
 }
 
 .product-card button {
   width: 100%;
+  margin-top: auto;
   background: var(--purple);
   color: var(--white);
   border: none;
@@ -377,10 +381,17 @@ body {
   margin-top: 50px;
 }
 
-.cart-items {
+.cart-layout {
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.cart-items {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -466,14 +477,73 @@ body {
   color: var(--deep-purple);
 }
 
-.cart-total button {
+.delete-btn {
+  margin-top: 10px;
+  padding: 7px 14px;
+  background: #f14747;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #8f2424;
+}
+
+/* RIGHT SIDE SUMMARY */
+
+.cart-summary {
+  width: 280px;
+  background: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(36, 16, 51, 0.12);
+  border-top: 4px solid var(--gold);
+  box-sizing: border-box;
+  position: sticky;
+  top: 20px;
+}
+
+.cart-summary h2 {
+  color: var(--deep-purple);
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+.grand-total {
+  border-top: 1px solid #ddd;
+  padding-top: 18px;
+  color: var(--deep-purple);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.cart-summary button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 13px;
   background: var(--gold);
   color: var(--deep-purple);
   border: none;
-  padding: 12px 25px;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cart-summary button:hover {
+  background: var(--purple);
+  color: var(--white);
 }
 
 /* ========= ADMIN LOGIN ======= */

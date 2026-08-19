@@ -19,7 +19,7 @@ function About() {
           aromas, there is something for everyone.
         </p>
 
-        <button>Explore Collection</button>
+        <button > Explore Collection</button>
       </div>
 
       <div className="about-image">

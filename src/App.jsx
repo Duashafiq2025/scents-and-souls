@@ -48,7 +48,7 @@ function App() {
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
     }
-    alert(product.title + "added to cart!");
+    alert(product.title + " added to cart!");
   }
 
   function increaseQuantity(id) {
@@ -67,6 +67,12 @@ function App() {
           : item,
       ),
     );
+  }
+  function deleteItem(id) {
+    setCart(cart.filter((item) => item.id !== id));
+  }
+  function clearCart() {
+    setCart([]);
   }
 
   const renderPage = () => {
@@ -100,6 +106,8 @@ function App() {
             cart={cart}
             increaseQuantity={increaseQuantity}
             decreaseQuantity={decreaseQuantity}
+            deleteItem={deleteItem}
+            clearCart={clearCart}
           />
         );
       case "admin-login":
