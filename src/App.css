@@ -551,33 +551,6 @@ body {
   text-decoration: underline;
 }
 
-/* ======== ADD PRODUCT-BTN ==== */
-.add-product-home-btn {
-  display: block;
-  margin: 30px 30px 20px auto;
-  padding: 13px 28px;
-  background: var(--gold);
-  color: var(--deep-purple);
-  border: none;
-  border-radius: 7px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(36, 16, 51, 0.15);
-  transition: 0.3s ease;
-}
-
-.add-product-home-btn:hover {
-  background: var(--purple);
-  color: var(--white);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(36, 16, 51, 0.2);
-}
-
-.add-product-home-btn:active {
-  transform: translateY(0);
-}
-
 /* ============== ADMIN PAGE ============== */
 
 .admin-page {
@@ -665,5 +638,31 @@ body {
 }
 
 .admin-page form button:active {
+  transform: translateY(0);
+}
+/* ======== ADD PRODUCT-BTN ==== */
+.add-product-home-btn {
+  display: block;
+  margin: 30px 30px 20px auto;
+  padding: 13px 28px;
+  background: var(--gold);
+  color: var(--deep-purple);
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(36, 16, 51, 0.15);
+  transition: 0.3s ease;
+}
+
+.add-product-home-btn:hover {
+  background: var(--purple);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(36, 16, 51, 0.2);
+}
+
+.add-product-home-btn:active {
   transform: translateY(0);
 }
