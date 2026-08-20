@@ -25,7 +25,7 @@ function Header({ cart, changePage, page, user }) {
 
         <a>Collections</a>
 
-        <a onClick={() => changePage("cart")}>🛒 cart ({cart.length})</a>
+        <a onClick={() => changePage("cart")}>  🛒 Cart <span className="cart-badge">{cart.length}</span></a>
       </div>
 
       <div>

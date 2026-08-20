@@ -923,6 +923,125 @@ body {
   }
 }
 
+/* ======================== TABLET =========================== */
+@media (max-width: 900px) {
+  .about-hero {
+    padding: 80px 6%;
+    flex-direction: column;
+    gap: 70px;
+  }
+  .about-hero-content {
+    width: 100%;
+  }
+  .about-hero-images {
+    width: 100%;
+    max-width: 560px;
+  }
+  .about-story {
+    padding: 90px 7%;
+    gap: 60px;
+  }
+  .story-image {
+    width: 48%;
+    height: 480px;
+  }
+  .story-content {
+    width: 48%;
+  }
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+  }
+  .featured-card {
+    transform: none;
+  }
+  .featured-card:hover {
+    transform: translateY(-8px);
+  }
+  .showcase-image {
+    height: 420px;
+  }
+}
+
+/* =================================== MOBILE ========================= */
+@media (max-width: 650px) {
+  .about-hero {
+    padding: 65px 6%;
+    gap: 55px;
+  }
+  .about-hero-content h1 {
+    font-size: 46px;
+  }
+  .about-intro {
+    font-size: 16px !important;
+  }
+  .about-hero-images {
+    height: 470px;
+  }
+  .hero-main-image {
+    width: 78%;
+    height: 410px;
+    top: 15px;
+  }
+  .hero-small-image {
+    width: 135px;
+    height: 180px;
+    bottom: 25px;
+  }
+  .gold-circle {
+    width: 75px;
+    height: 75px;
+    right: -10px;
+    bottom: 5px;
+  } 
+  .about-story {
+    padding: 75px 6%;
+    flex-direction: column;
+    gap: 60px;
+  }
+  .story-image {
+    width: 100%;
+    height: 450px;
+    max-width: 500px;
+  }
+  .story-content {
+    width: 100%;
+  }
+  .story-content h2 {
+    font-size: 43px;
+  } 
+  .about-philosophy {
+    padding: 80px 6%;
+  }
+  .philosophy-heading {
+    margin-bottom: 45px;
+  }
+  .philosophy-heading h2 {
+    font-size: 43px;
+  }
+  .philosophy-card {
+    min-height: auto;
+    padding: 35px 25px;
+  } 
+  .about-showcase {
+    padding: 80px 5%;
+  }
+  .showcase-text h2 {
+    font-size: 43px;
+  }
+  .showcase-image {
+    height: 350px;
+    border-radius: 8px;
+  } 
+  .about-final {
+    min-height: 380px;
+    padding: 70px 20px;
+  }
+  .about-final h2 {
+    font-size: 45px;
+  }
+}
+
 /* ================= CART PAGE ================= */
 
 .cart-page {
@@ -1057,6 +1176,15 @@ body {
 
 .delete-btn:hover {
   background: #8f2424;
+}
+.cart-badge {
+  background: var(--gold);
+  color: var(--deep-purple);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 50%;
+  margin-left: 5px;
 }
 
 /* RIGHT SIDE SUMMARY */

@@ -113,7 +113,7 @@ function App() {
       case "admin-login":
         return <AdminLogin changePage={setPage} />;
       case "admin":
-        return <AdminPage />;
+        return user ? <AdminPage /> :<AdminLogin changePage={setPage}/>;
 
       default:
         return <Hero />;
