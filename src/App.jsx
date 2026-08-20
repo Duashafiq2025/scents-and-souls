@@ -80,7 +80,7 @@ function App() {
       case "home":
         return (
           <>
-            <Hero />
+            <Hero changePage={setPage} />
             <button
               className="add-product-home-btn"
               onClick={() => {
@@ -98,7 +98,7 @@ function App() {
         );
 
       case "about":
-        return <About />;
+        return <About changePage={setPage} />;
 
       case "cart":
         return (

@@ -1,7 +1,7 @@
 import React from "react";
 import heroimg from "../assets/hero-img.png";
 
-function Hero() {
+function Hero(changePage) {
   return (
     <div className="hero-section">
       <div className="hero-content">
@@ -11,7 +11,15 @@ function Hero() {
           Explore our collection of elegant fragrances crafted to become part of
           your story.
         </p>
-        <button>Explore Collection →</button>
+        <button
+          onClick={() => {
+            document.getElementById("collections").scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          Explore Collection →
+        </button>
       </div>
       <div className="hero-img">
         <img src={heroimg} alt="" />

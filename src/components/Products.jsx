@@ -17,7 +17,7 @@ function Products({ addToCart }) {
     fetchProducts();
   }, []);
   return (
-    <div className="products-section">
+    <div className="products-section" id="collections">
       <h1>Best Collections</h1>
       <div className="products-container">
         {products.map((product) => (

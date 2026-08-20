@@ -73,7 +73,7 @@ function Cart({
                     className="delete-btn"
                     onClick={() => deleteItem(product.id)}
                   >
-                    Cancel
+                    Delete
                   </button>
                 </div>
               </div>
