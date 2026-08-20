@@ -172,7 +172,8 @@ function About() {
 
         <div className="showcase-image">
           <img
-            src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1400&q=85"
+          
+              src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1400&q=85"
             alt="Luxury perfume collection"
           />
         </div>

@@ -17,44 +17,100 @@ body {
 
 /* =========== HEADER ========== */
 .header {
-  background: linear-gradient(90deg, #180a25, #381e50, #241033);
-  height: 90px;
+  height: 88px;
+  padding: 0 6%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 7, 24, 0.94);
+  border-bottom: 1px solid rgba(212, 175, 106, 0.15);
+  backdrop-filter: blur(15px);
+}
+
+.header-logo-wrap {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  width: 170px;
+  width: 155px;
   height: auto;
-}
-
-.header a {
-  color: var(--cream);
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  margin: 0 15px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.header a:hover {
-  color: #d4af6a;
+.logo:hover {
+  transform: scale(1.03);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+.header a {
+  position: relative;
+  color: rgba(248, 244, 250, 0.8);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.header div {
-  display: flex;
-  gap: 30px;
+.header a:hover,
+.header a.active {
+  color: var(--gold);
 }
-.admin-login {
+.header a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+.header a:hover::after,
+.header a.active::after {
+  width: 20px;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.cart-icon {
+  font-size: 14px;
+}
+.cart-count {
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--gold);
   color: var(--deep-purple);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+}
+.admin-login {
+  padding: 10px 22px;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(212, 175, 106, 0.6);
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -63,7 +119,11 @@ body {
   background: var(--cream);
   color: var(--deep-purple);
 }
-
+.admin-login:hover {
+  background: var(--gold);
+  color: var(--deep-purple);
+  transform: translateY(-2px);
+}
 /* ============= HERO SECTION ============ */
 
 .hero-section {
@@ -993,7 +1053,7 @@ body {
     height: 75px;
     right: -10px;
     bottom: 5px;
-  } 
+  }
   .about-story {
     padding: 75px 6%;
     flex-direction: column;
@@ -1009,7 +1069,7 @@ body {
   }
   .story-content h2 {
     font-size: 43px;
-  } 
+  }
   .about-philosophy {
     padding: 80px 6%;
   }
@@ -1022,7 +1082,7 @@ body {
   .philosophy-card {
     min-height: auto;
     padding: 35px 25px;
-  } 
+  }
   .about-showcase {
     padding: 80px 5%;
   }
@@ -1032,7 +1092,7 @@ body {
   .showcase-image {
     height: 350px;
     border-radius: 8px;
-  } 
+  }
   .about-final {
     min-height: 380px;
     padding: 70px 20px;
@@ -1330,6 +1390,12 @@ body {
 .admin-page h1 {
   color: var(--deep-purple);
   font-size: 35px;
+  margin: 0 0 30px;
+  text-align: center;
+}
+.admin-page h2 {
+  color: var(--deep-purple);
+  font-size: 25px;
   margin: 0 0 30px;
   text-align: center;
 }

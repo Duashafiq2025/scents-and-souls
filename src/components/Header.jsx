@@ -16,19 +16,51 @@ function Header({ cart, changePage, page, user }) {
 
   return (
     <nav className="header">
-      <img className="logo" src={logo} alt="Scents & Souls" />
-
-      <div>
-        <a onClick={() => changePage("home")}>Home</a>
-
-        <a onClick={() => changePage("about")}>About us</a>
-
-        <a>Collections</a>
-
-        <a onClick={() => changePage("cart")}>  🛒 Cart <span className="cart-badge">{cart.length}</span></a>
+      <div className="header-logo-wrap">
+        <img
+          className="logo"
+          src={logo}
+          alt="Scents & Souls"
+          onClick={() => changePage("home")}
+        />
       </div>
 
-      <div>
+      <div className="nav-links">
+        <a
+          className={page === "home" ? "active" : ""}
+          onClick={() => changePage("home")}
+        >
+          Home
+        </a>
+
+        <a
+          className={page === "about" ? "active" : ""}
+          onClick={() => changePage("about")}
+        >
+          About Us
+        </a>
+
+        <a
+          onClick={() =>
+            document.getElementById("collections")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+        >
+          Collections
+        </a>
+
+        <a
+          className={`cart-link ${page === "cart" ? "active" : ""}`}
+          onClick={() => changePage("cart")}
+        >
+          <span className="cart-icon">🛒</span>
+          Cart
+          <span className="cart-count">{cart.length}</span>
+        </a>
+      </div>
+
+      <div className="header-account">
         {user ? (
           <button className="admin-login" onClick={handleLogout}>
             Logout

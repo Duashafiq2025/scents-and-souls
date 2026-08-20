@@ -34,9 +34,10 @@ function AdminPage() {
 
   return (
     <div className="admin-page">
-      <h1>Add New Product</h1>
+      <h1>Scents and Souls</h1>
 
       <form onSubmit={addProduct}>
+        <h2>Add a New Fragrance</h2>
         <input
           type="text"
           placeholder="Product name"
@@ -64,7 +65,7 @@ function AdminPage() {
           onChange={(event) => setImageUrl(event.target.value)}
         />
 
-        <button type="submit">Add Product</button>
+        <button type="submit">Add Fragrance →</button>
       </form>
     </div>
   );
