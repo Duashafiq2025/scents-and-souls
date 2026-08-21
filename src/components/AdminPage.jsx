@@ -9,13 +9,14 @@ function AdminPage() {
 
   async function addProduct(event) {
     event.preventDefault();
-
+     const { data: { user } } = await supabase.auth.getUser();
     const { error } = await supabase.from("products").insert([
       {
         title: title,
         price: price,
         description: description,
         image_url: imageUrl,
+        user_email: user.email,
       },
     ]);
 
