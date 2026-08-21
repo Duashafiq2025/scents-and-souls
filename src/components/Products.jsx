@@ -16,9 +16,29 @@ function Products({ addToCart }) {
 
     fetchProducts();
   }, []);
+
   return (
-    <div className="products-section" id="collections">
-      <h1>Best Collections</h1>
+    <section className="products-section" id="collections">
+      <div className="collection-heading">
+        <p className="collection-label">THE COLLECTION</p>
+
+        <h2>
+          Find Your
+          <span>Signature Scent.</span>
+        </h2>
+
+        <p className="collection-description">
+          Explore fragrances created for every mood, every moment, and every
+          version of you.
+        </p>
+
+        <div className="collection-line">
+          <span></span>
+          <i>✦</i>
+          <span></span>
+        </div>
+      </div>
+
       <div className="products-container">
         {products.map((product) => (
           <ProductCard
@@ -28,7 +48,8 @@ function Products({ addToCart }) {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
+
 export default Products;

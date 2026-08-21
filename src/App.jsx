@@ -126,7 +126,7 @@ function App() {
 
       <main>{renderPage()}</main>
 
-      <Footer />
+      <Footer changePage={setPage}/>
     </div>
   );
 }

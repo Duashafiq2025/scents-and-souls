@@ -41,16 +41,6 @@ function Header({ cart, changePage, page, user }) {
         </a>
 
         <a
-          onClick={() =>
-            document.getElementById("collections")?.scrollIntoView({
-              behavior: "smooth",
-            })
-          }
-        >
-          Collections
-        </a>
-
-        <a
           className={`cart-link ${page === "cart" ? "active" : ""}`}
           onClick={() => changePage("cart")}
         >

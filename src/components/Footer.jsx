@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png";
 
-function Footer() {
+function Footer({changePage}) {
   return (
     <footer className="footer">
       <div className="footer-glow"></div>
@@ -23,9 +23,8 @@ function Footer() {
           <h3>Explore</h3>
 
           <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#collections">Collections</a>
-          <a href="#">User Portal</a>
+          <a href="#"  onClick={() => changePage("about")} >About Us</a>
+          <a href="#">Cart</a>
         </div>
 
         <div className="footer-contact">
