@@ -1941,3 +1941,55 @@ body {
     grid-column: 1 / -1;
   }
 }
+
+/* ============= MOBILE HUMBURGER =========== */
+
+.menu-btn,
+.mobile-login {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .header {
+    height: 70px;
+    padding: 0 5%;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 27px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    background: var(--dark-bg);
+    flex-direction: column;
+    gap: 22px;
+    border-top: 1px solid rgba(212, 175, 106, 0.15);
+  }
+
+  .nav-links.menu-open {
+    display: flex;
+  }
+
+  .mobile-login {
+    display: block;
+  }
+
+  .header-account {
+    display: none;
+  }
+}
