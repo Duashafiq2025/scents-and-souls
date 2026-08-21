@@ -24,6 +24,7 @@ function Footer({changePage}) {
 
           <a href="#">Home</a>
           <a href="#"  onClick={() => changePage("about")} >About Us</a>
+          <a href="#">User Portal</a>
           <a href="#">Cart</a>
         </div>
 

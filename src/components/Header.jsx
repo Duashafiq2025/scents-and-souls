@@ -39,6 +39,12 @@ function Header({ cart, changePage, page, user }) {
         >
           About Us
         </a>
+        <a
+          className={page === "admin-login" || page === "admin" ? "active" : ""}
+          onClick={() => changePage(user ? "admin" : "admin-login")}
+        >
+          User Portal
+        </a>
 
         <a
           className={`cart-link ${page === "cart" ? "active" : ""}`}

@@ -108,12 +108,13 @@ function App() {
             decreaseQuantity={decreaseQuantity}
             deleteItem={deleteItem}
             clearCart={clearCart}
+            user={user}
           />
         );
       case "admin-login":
         return <AdminLogin changePage={setPage} />;
       case "admin":
-        return user ? <AdminPage /> :<AdminLogin changePage={setPage}/>;
+        return user ? <AdminPage /> : <AdminLogin changePage={setPage} />;
 
       default:
         return <Hero />;
@@ -126,7 +127,7 @@ function App() {
 
       <main>{renderPage()}</main>
 
-      <Footer changePage={setPage}/>
+      <Footer changePage={setPage} />
     </div>
   );
 }

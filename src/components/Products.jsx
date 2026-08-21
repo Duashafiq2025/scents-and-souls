@@ -4,16 +4,14 @@ import { supabase } from "../supabaseClient";
 
 function Products({ addToCart }) {
   const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    async function fetchProducts() {
-      const response = await supabase.from("products").select("*");
-
-      if (response.data) {
-        setProducts(response.data);
-      }
+  
+  async function fetchProducts() {
+    const response = await supabase.from("products").select("*");
+    if (response.data) {
+      setProducts(response.data);
     }
-
+  }
+  useEffect(() => {
     fetchProducts();
   }, []);
 

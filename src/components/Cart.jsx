@@ -7,8 +7,10 @@ function Cart({
   decreaseQuantity,
   clearCart,
   deleteItem,
+  user
 }) {
   async function placeOrder() {
+    const orderEmail = user ? user.email : "guest@example.com";
     for (const product of cart) {
       const { error } = await supabase.from("orders").insert([
         {
@@ -16,6 +18,7 @@ function Cart({
           price: product.price,
           quantity: product.quantity,
           total: product.price * product.quantity,
+          user_email: orderEmail,
         },
       ]);
 
