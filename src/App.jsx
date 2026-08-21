@@ -81,18 +81,7 @@ function App() {
         return (
           <>
             <Hero changePage={setPage} />
-            <button
-              className="add-product-home-btn"
-              onClick={() => {
-                if (user) {
-                  setPage("admin");
-                } else {
-                  setPage("admin-login");
-                }
-              }}
-            >
-              + Add Products
-            </button>
+           
             <Products addToCart={addToCart} />
           </>
         );
