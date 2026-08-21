@@ -33,10 +33,7 @@ function Header({ cart, changePage, page, user }) {
         />
       </div>
 
-      <button
-        className="menu-btn"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
+      <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? "✕" : "☰"}
       </button>
 
@@ -93,10 +90,7 @@ function Header({ cart, changePage, page, user }) {
             Logout
           </button>
         ) : (
-          <button
-            className="admin-login"
-            onClick={() => goTo("admin-login")}
-          >
+          <button className="admin-login" onClick={() => goTo("admin-login")}>
             Login
           </button>
         )}

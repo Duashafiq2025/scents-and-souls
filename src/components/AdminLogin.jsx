@@ -40,33 +40,58 @@ function AdminLogin({ changePage }) {
 
   return (
     <div className="admin-login-page">
-      <h1>{isSignUp ? "Admin Sign Up" : "Admin Login"}</h1>
+      <div className="admin-login-card">
+        <div className="admin-login-icon">✦</div>
 
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Enter email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
+        <p className="admin-label">SCENTS & SOULS</p>
 
-        <input
-          type="password"
-          placeholder="Enter password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
+        <h1>{isSignUp ? "Create Account" : "Welcome Back"}</h1>
 
-        <button className="submit-btn">{isSignUp ? "Sign Up" : "Login"}</button>
-      </form>
+        <p className="admin-subtitle">
+          {isSignUp
+            ? "Create your account to manage your collection."
+            : "Sign in to access your admin dashboard."}
+        </p>
 
-      <p>
-        {isSignUp ? "Already have an account?" : "Don't have an account?"}
+        <form onSubmit={handleLogin}>
+          <label>Email Address</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            required
+          />
 
-        <button className="toggle-btn" onClick={() => setIsSignUp(!isSignUp)}>
-          {isSignUp ? "Login" : "Sign Up"}
-        </button>
-      </p>
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            required
+          />
+
+          <button className="submit-btn" type="submit">
+            {isSignUp ? "Create Account" : "Sign In"}
+            <span>→</span>
+          </button>
+        </form>
+
+        <div className="login-divider">
+          <span></span>
+          <i>✦</i>
+          <span></span>
+        </div>
+
+        <p className="account-text">
+          {isSignUp ? "Already have an account?" : "Don't have an account?"}
+
+          <button className="toggle-btn" onClick={() => setIsSignUp(!isSignUp)}>
+            {isSignUp ? "Sign In" : "Create Account"}
+          </button>
+        </p>
+      </div>
     </div>
   );
 }

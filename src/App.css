@@ -315,26 +315,15 @@ body {
   background: rgba(212, 175, 106, 0.3);
 }
 
-
-
-
-
-
 /* ========================= COLLECTION ========== */
-
 
 .products-section {
   padding: 120px 7%;
 
   background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(91, 42, 134, 0.08),
-      transparent 35%
-    ),
+    radial-gradient(circle at 50% 0%, rgba(91, 42, 134, 0.08), transparent 35%),
     var(--cream);
 }
-
 
 /* HEADING */
 
@@ -347,7 +336,7 @@ body {
 .collection-label {
   color: var(--gold);
   font-size: 11px;
-  }
+}
 
 .collection-label {
   color: var(--gold);
@@ -363,7 +352,7 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(43px, 5vw, 62px);
   font-weight: 400;
-   line-height: 1.05;
+  line-height: 1.05;
 }
 
 .collection-heading h2 span {
@@ -399,7 +388,6 @@ body {
   font-size: 12px;
 }
 
-
 /* =========================================================
    PRODUCT GRID
 ========================================================= */
@@ -408,13 +396,9 @@ body {
   max-width: 1250px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(260px, 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
-
 
 /* =========================================================
    PRODUCT CARD
@@ -425,8 +409,7 @@ body {
   border: 1px solid rgba(36, 16, 51, 0.07);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow:
-    0 10px 35px rgba(36, 16, 51, 0.07);
+  box-shadow: 0 10px 35px rgba(36, 16, 51, 0.07);
   transition:
     transform 0.4s ease,
     box-shadow 0.4s ease;
@@ -438,11 +421,7 @@ body {
 .product-image-wrap {
   height: 330px;
   background:
-    radial-gradient(
-      circle at center,
-      rgba(91, 42, 134, 0.09),
-      transparent 60%
-    ),
+    radial-gradient(circle at center, rgba(91, 42, 134, 0.09), transparent 60%),
     #f5f0f7;
   position: relative;
   overflow: hidden;
@@ -522,7 +501,7 @@ body {
   border: none;
   border-radius: 3px;
   font-size: 11px;
- font-weight: 600;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -555,7 +534,7 @@ body {
   font-size: 10px;
   letter-spacing: 1px;
   cursor: pointer;
-   cursor: pointer;
+  cursor: pointer;
   transition: 0.3s ease;
 }
 
@@ -564,10 +543,6 @@ body {
   color: var(--white);
   transform: translateY(-2px);
 }
-
-
-
-
 
 /*  ===================== FOOTER STYLING ================= */
 
@@ -1382,8 +1357,7 @@ body {
   }
 }
 
-
- /* ================= CART PAGE ================= */
+/* ================= CART PAGE ================= */
 
 .cart-page {
   min-height: 65vh;
@@ -1513,7 +1487,6 @@ body {
   color: white;
 }
 
-
 /* SUMMARY */
 
 .cart-summary {
@@ -1580,7 +1553,7 @@ body {
   width: 110px;
   height: 2px;
   background: var(--gold);
-   margin: 0 0 45px;
+  margin: 0 0 45px;
 }
 
 /* MOBILE */
@@ -1592,7 +1565,6 @@ body {
 
   .cart-page h1 {
     font-size: 35px;
-    
   }
 
   .cart-layout {
@@ -1627,206 +1599,275 @@ body {
   }
 }
 
-
 /* ============== ADMIN LOGIN ============== */
 
 .admin-login-page {
-  min-height: 70vh;
-  background: var(--cream);
+  min-height: 75vh;
+  padding: 70px 20px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 70px 20px;
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(91, 42, 134, 0.15),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(212, 175, 106, 0.08),
+      transparent 30%
+    ),
+    var(--cream);
 }
 
-.admin-login-page h1 {
+.admin-login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 45px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(212, 175, 106, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(36, 16, 51, 0.12);
+  box-sizing: border-box;
+}
+
+.admin-login-icon {
+  color: var(--gold);
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.admin-label,
+.admin-header > p {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin: 0 0 12px;
+}
+
+.admin-login-card h1 {
   color: var(--deep-purple);
   font-family: Georgia, serif;
   font-size: 38px;
   font-weight: 400;
-  margin: 0 0 30px;
+  margin: 0;
 }
 
-.admin-login-page form {
-  width: 100%;
-  max-width: 360px;
-  background: var(--white);
-  padding: 35px;
-  border-radius: 10px;
-  border-top: 4px solid var(--gold);
-  box-shadow: 0 10px 30px rgba(36, 16, 51, 0.12);
+.admin-subtitle {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 12px 0 30px;
 }
 
-.admin-login-page input {
-  width: 100%;
-  height: 48px;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd3e3;
-  border-radius: 6px;
-  box-sizing: border-box;
-  outline: none;
-  font-size: 14px;
+.admin-login-card form {
+  text-align: left;
+}
+
+.admin-login-card label,
+.form-group label {
+  display: block;
   color: var(--deep-purple);
-  background: #fcfafd;
-}
-
-.admin-login-page input:focus {
-  border-color: var(--purple);
-  box-shadow: 0 0 0 3px rgba(91, 42, 134, 0.08);
-}
-
-.submit-btn {
-  width: 100%;
-  padding: 13px;
-  background: var(--deep-purple);
-  color: var(--white);
-  border: none;
-  border-radius: 6px;
+  font-size: 11px;
   font-weight: 600;
-  cursor: pointer;
+  letter-spacing: 0.5px;
+  margin: 0 0 7px;
+}
+
+.admin-login-card input,
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd3e3;
+  border-radius: 5px;
+  outline: none;
+  background: #fcfafd;
+  color: var(--deep-purple);
+  font-size: 13px;
   transition: 0.3s;
 }
 
-.submit-btn:hover {
-  background: var(--gold);
-  color: var(--deep-purple);
+.admin-login-card input {
+  height: 46px;
 }
 
-.admin-login-page > p {
+.admin-login-card input:focus,
+.admin-form input:focus,
+.admin-form textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 106, 0.1);
+}
+
+.submit-btn,
+.admin-add-btn {
+  width: 100%;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: var(--deep-purple);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.submit-btn span,
+.admin-add-btn span {
+  color: var(--gold);
+  font-size: 17px;
+}
+
+.submit-btn:hover,
+.admin-add-btn:hover {
+  background: var(--gold);
+  color: var(--deep-purple);
+  transform: translateY(-2px);
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0 20px;
+}
+
+.login-divider span {
+  height: 1px;
+  flex: 1;
+  background: #e8dfeb;
+}
+
+.login-divider i {
+  color: var(--gold);
+  font-style: normal;
+  font-size: 10px;
+}
+
+.account-text {
   color: var(--text);
-  font-size: 14px;
-  margin-top: 20px;
+  font-size: 12px;
+  margin: 0;
 }
 
 .toggle-btn {
   background: none;
   border: none;
   color: var(--purple);
+  font-weight: 700;
   cursor: pointer;
-  font-weight: 600;
   margin-left: 5px;
 }
 
 .toggle-btn:hover {
   color: var(--gold);
-  text-decoration: underline;
 }
-
-@media (max-width: 500px) {
-  .admin-login-page {
-    padding: 55px 15px;
-  }
-
-  .admin-login-page h1 {
-    font-size: 32px;
-  }
-
-  .admin-login-page form {
-    padding: 28px 22px;
-  }
-}
-
 
 /* ============== ADMIN PAGE ============== */
 
 .admin-page {
-  min-height: 70vh;
-  background: var(--cream);
-  padding: 70px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 75vh;
+  padding: 80px 20px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(91, 42, 134, 0.1), transparent 35%),
+    var(--cream);
   box-sizing: border-box;
 }
 
-.admin-page h1 {
-  color: var(--deep-purple);
-  font-size: 35px;
-  margin: 0 0 30px;
+.admin-header {
   text-align: center;
+  margin-bottom: 40px;
 }
-.admin-page h2 {
+
+.admin-header h1 {
+  color: var(--deep-purple);
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 5vw, 55px);
+  font-weight: 400;
+  margin: 0;
+}
+
+.admin-header > span {
+  display: block;
+  width: 55px;
+  height: 1px;
+  margin: 18px auto;
+  background: var(--gold);
+}
+
+.admin-header h2 {
   color: var(--purple);
-  font-size: 25px;
-  margin: 0 0 30px;
-  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
 }
 
-.admin-page form {
+.admin-form {
   width: 100%;
-  max-width: 500px;
-  background: var(--white);
+  max-width: 700px;
+  margin: auto;
   padding: 40px;
-  border-radius: 15px;
   box-sizing: border-box;
-  box-shadow: 0 8px 30px rgba(36, 16, 51, 0.15);
-  border-top: 4px solid var(--gold);
+  background: var(--white);
+  border: 1px solid rgba(212, 175, 106, 0.25);
+  border-top: 3px solid var(--gold);
+  border-radius: 10px;
+  box-shadow: 0 15px 45px rgba(36, 16, 51, 0.1);
 }
 
-.admin-page input,
-.admin-page textarea {
-  width: 100%;
-  padding: 13px 14px;
-  margin-bottom: 18px;
-  border: 1px solid #d8cde0;
-  border-radius: 7px;
-  box-sizing: border-box;
-  outline: none;
-  font-family: sans-serif;
-  font-size: 14px;
-  color: var(--deep-purple);
-  background: #fcfafd;
-  transition: 0.3s ease;
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-.admin-page input {
-  height: 48px;
-}
-
-.admin-page textarea {
+.admin-form textarea {
   height: 120px;
   resize: vertical;
 }
 
-.admin-page input::placeholder,
-.admin-page textarea::placeholder {
-  color: #918699;
+.admin-add-btn {
+  margin-top: 5px;
 }
 
-.admin-page input:focus,
-.admin-page textarea:focus {
-  border-color: var(--purple);
-  box-shadow: 0 0 0 3px rgba(91, 42, 134, 0.08);
-  background: var(--white);
+/* ============== ADMIN MOBILE ============== */
+
+@media (max-width: 600px) {
+  .admin-login-page {
+    padding: 50px 15px;
+  }
+
+  .admin-login-card {
+    padding: 32px 24px;
+  }
+
+  .admin-login-card h1 {
+    font-size: 32px;
+  }
+
+  .admin-form {
+    padding: 28px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .admin-page {
+    padding: 60px 15px;
+  }
 }
-
-.admin-page form button {
-  width: 100%;
-  padding: 13px;
-  background: var(--deep-purple);
-  color: var(--white);
-  border: none;
-  border-radius: 7px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.admin-page form button:hover {
-  background: var(--gold);
-  color: var(--deep-purple);
-  transform: translateY(-2px);
-}
-
-.admin-page form button:active {
-  transform: translateY(0);
-}
-
-
-
 
 /* ============= MOBILE ==================== */
 
